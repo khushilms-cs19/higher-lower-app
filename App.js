@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
-import { StyleSheet, View } from 'react-native';
+import { SafeAreaView, StyleSheet, View } from 'react-native';
 import * as Font from "expo-font";
 import AppLoading from 'expo-app-loading';
 //components
@@ -42,7 +42,7 @@ export default function App() {
         content = <GameOver numRounds={guessRounds} userNumber={userNumber} onRestart={configureNewGameHandler} />
     }
     return (
-        <View style={styles.screen}>
+        <SafeAreaView style={styles.screen}>
             <Header title="Guess a Number." />
             {
                 content
@@ -50,7 +50,7 @@ export default function App() {
             }
             {/* <StartGameScreen />
             <GameScreen /> */}
-        </View>
+        </SafeAreaView>
     );
 }
 
